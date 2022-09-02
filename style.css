@@ -1,0 +1,454 @@
+:root {
+    --cor-fundo: rgb(0, 74, 173);
+    --cor-hover: rgb(43, 157, 177);
+    --cor-primaria: rgb(255, 255, 255);
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Caveat", cursive;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*menu*/
+.pokeInfo img {
+    max-width: 10vw;
+    border-radius: 10px;
+    min-width: 100px;
+}
+.dp-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+}
+.dp-menu ul li {
+    display: inline-block;
+    position: relative;
+}
+.dp-menu ul li a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background .3s;
+}
+.dp-menu ul li a:hover {
+    background-color: var(--cor-hover);
+    border-radius: 10px;
+}
+
+/*sub menu*/
+.dp-menu ul ul {
+    text-align: center;
+    display: none;
+    left: 0;
+    position: absolute;
+}
+.dp-menu ul li:hover ul {
+    display: block;
+}
+.dp-menu ul ul {
+    width: 150px;
+}
+.dp-menu ul ul li a {
+    display: block;
+}
+
+/*filtro e busca*/
+.sessao {
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+    width: 100%;
+    display:block;
+    text-align: center;
+    font-size-adjust: 15px;
+}
+.typePoke, .generationPoke, .sort{
+    border-top: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(106, 105, 105);
+    border-left: 2px solid rgb(0, 0, 0);
+    border-right: 2px solid rgb(106, 105, 105);
+    border-radius: 10px;
+    padding: 10px;
+    width: 10%;
+    font-weight: bold;
+    text-align: center;
+}
+.buscar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+/*cards*/
+a{
+    text-decoration: none;
+    color: black;
+}
+.card {
+    align-content: center;
+    display: grid;
+    text-transform: capitalize;
+    text-decoration: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1vw;
+    filter: drop-shadow(0 5px 3px rgb(0, 0, 0));
+    max-width: 70vw;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.cardPokemon {
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3vw;
+    box-shadow: 0 1vw 1vw rgb(106, 105, 105);
+    border-top: 0.1vw solid rgb(106, 105, 105);
+    border-bottom: 0.1vw solid rgb(106, 105, 105);
+    margin: 1vw;
+    padding: auto;
+    left: 15vw;
+    right: 10vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background .3s;
+
+}
+.cardPokemon:hover {
+    background-color: var(--cor-hover);
+}
+
+.imgCard {
+    max-width: 10vw;
+    object-fit: contain;
+    filter:drop-shadow(5px 3px rgb(106, 105, 105));
+}
+.tipo {
+    display: grid;
+    box-sizing: border-box;
+}
+
+/*CP*/
+#calCp {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    width: 30vw;
+    height: auto;
+    margin: auto;
+    margin-top: 5vw;
+    margin-bottom: 7vw;
+}
+.img{
+    object-fit:contain;
+}
+#cpCapturado {
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: 10px;
+    transition: background .3s;
+    font-family: "Caveat", cursive;
+    text-align: center;
+    font-size: 2vw;
+}
+#cpCapturado:hover {
+    background-color: var(--cor-hover);
+}
+#btnCalCp {
+    margin-top: 2%;
+    padding: 2%;
+    font-family: "Caveat", cursive;
+    font-size: 3vw;
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+    border-radius: 10px;
+    transition: background .3s;
+}
+#btnCalCp:hover {
+    background-color: var(--cor-hover);
+}
+#select{
+    text-transform: capitalize;
+    padding: 2%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--cor-primaria);
+    transition: background .3s;
+    font-family: "Caveat", cursive;
+    font-size: 2vw;
+}
+#select:hover {
+    background-color: var(--cor-hover);
+}
+#imgCp{
+    margin: auto;
+}
+#resultado{
+    text-align: center;
+    font-size: 2vw;
+}
+
+/*tabela*/
+.tatk, .tdef{
+    margin-top: 2vw;
+    text-align: center;
+}
+.ctable, .cdtable {
+    background-color: var(--cor-fundo);
+    border-radius: 50px;
+    color: rgb(250, 250, 250);
+    margin: 3vw;
+    padding: 10px;
+}
+.table, .dtable {
+    text-transform: capitalize;
+    margin-top: 1.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1.5vw;
+    background-color: var(--cor-primaria);
+}
+
+/*Sobre*/
+.nos {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 5vw;
+    margin-bottom: 15vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 3vw;
+}
+.quem, .gostou {
+    font-size-adjust: 2vw;
+    text-align: center;
+}
+.somos, .contatos {
+    text-align: center;
+    font-size-adjust: 1.5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.contato{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 5vw;
+    margin-bottom: 14vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 3vw;
+}
+
+/*footer*/
+.pe{
+    flex-shrink: 0;
+    bottom: 0px;
+    width: 97%;
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+
+/* INFO */
+.container{
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.geralInfo{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-info{
+    align-self: flex-start;
+    margin-right: 1vw;
+}
+.id-info{
+    font-size: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    color:rgb(106, 105, 105)
+ 
+}
+.nome-info{
+    text-transform: capitalize;
+    font-size: 7vh;
+    margin-top: 0;
+    margin-bottom: 0;
+ 
+}
+.rarity-info{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    color:rgb(106, 105, 105)
+
+}
+
+
+.bloco{
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+}
+.fra-res{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 4%;
+    margin-bottom: 3vh;
+    border-radius: 0 0 10px 10px;
+    flex-wrap: wrap;
+}
+.res-fra{
+    
+    border-radius: 10px;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    
+}
+.titulo-res-fra{
+    background-color: var(--cor-fundo);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 3%;
+    color: white;
+    font-size: 100%;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+}
+ .res{
+    background-color: rgba(0, 128, 0, 0.466) ;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding: 4%;
+    margin-bottom: 2%;
+}
+
+.fra{
+    background-color: rgba(255, 0, 0, 0.397);
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding: 4%;
+    border-bottom: auto;
+    font-size: 100%;
+
+
+}
+.titulo-info{
+    text-align: center;
+    background-color: var(--cor-fundo);
+    color: white;
+    padding: 3%;
+    font-size: 100%;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.stats{
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+
+}
+.table-stats{
+    text-align: center;
+    padding: 5%;
+    margin: auto;
+}
+.ataques{
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.atk-g{
+    background: var(--cor-primaria);
+    margin-bottom: 3vh;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding: 5%;
+    text-transform: capitalize;
+
+}
+.table-atk{
+    background: var(--cor-primaria);
+    border-radius: 0 0 10px 10px;
+    text-align: left;
+    padding: 2%;
+}
+caption{
+    color: var(--cor-primaria);
+    background: var(--cor-hover);
+    padding: 3%;  
+    border-radius: 10px 10px 0 0;
+
+}
+
+
+@media (max-width: 600px){
+  #calCp
+   {   
+    width: 90vw;
+    margin-top: 40vw;
+    margin-bottom: 60vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+   }
+   .seletores{
+    text-align: center;
+    margin-right: 10vw;
+   }
+   .contato{
+    margin-top: 20vw;
+    margin-bottom: 35vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+   }
+   .typePoke, .generationPoke, .sort{
+    width: 20vw;
+    text-align: center;
+   }
+   .img{
+       height: 15vh;
+   }
+}
